@@ -4,7 +4,7 @@ const LoginForm = () => {
   return (
     <div className="container_login">
         <main className="container_form">
-            <form action="/" method="POST">
+            <form>
                 <div className="input_group">
                     <label htmlFor="user">E-mail</label>
                     <input type="text" placeholder="E-mail"/>
