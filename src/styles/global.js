@@ -14,6 +14,14 @@ const GlobalStyle = createGlobalStyle `
         background-color: #f0f2f5;
         font-family: Verdana, 'sans-serif';
     }
+
+    a {
+        text-decoration: none;
+    }
+
+    ul {
+        list-style: none
+    }
 `
 
 export default GlobalStyle;

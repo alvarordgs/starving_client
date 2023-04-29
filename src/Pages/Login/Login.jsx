@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Container, Form, SubContainer } from './loginStyle';
-import Input from '../../Components/Input/Input';
-import Botao from '../../Components/Botao/Botao';
+import Input from '../../Components/Login/Input/Input';
+import Botao from '../../Components/Login/Botao/Botao';
 import { validarEmail, validarSenha } from '../../Utilities/validadores';
 import UserService from '../../Services/UserService';
 import { useNavigate } from 'react-router-dom';

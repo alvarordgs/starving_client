@@ -36,7 +36,6 @@ export const Form = styled.form`
     a {
         color: white;
         font-size: 0.875rem;
-        text-decoration: none;
     }
 `
 
