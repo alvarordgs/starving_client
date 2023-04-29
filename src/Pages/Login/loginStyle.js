@@ -40,9 +40,8 @@ export const Form = styled.form`
     }
 `
 
-export const RodapeForm = styled.div`
+export const SubContainer = styled.div`
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px 0px;
+    align-items: center;    
+    gap: 0px 20px;
 `

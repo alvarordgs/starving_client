@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container, Form, RodapeForm } from './loginStyle';
+import { Container, Form, SubContainer } from './loginStyle';
 import Input from '../../Components/Input/Input';
 import Botao from '../../Components/Botao/Botao';
 import { validarEmail, validarSenha } from '../../Utilities/validadores';
@@ -59,10 +59,10 @@ const Login = () => {
                     onClick={handleSubmit}
                     disabled={loading === true || !validadorInput()}
                 />
-                <RodapeForm>
+                <SubContainer>
                     <p>Não possui conta ?</p>
                     <a href="#">Cadastrar</a>
-                </RodapeForm>
+                </SubContainer>
             </Form>
         </Container>
     )
