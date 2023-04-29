@@ -21,7 +21,7 @@ const Login = () => {
             const response = await userService.login(form);
             if(response === true) {
                 alert('usuario logado com sucesso');
-                navigate('/home');
+                navigate('/restaurantes');
             }
             setLoading(false)
         } catch(err) {
