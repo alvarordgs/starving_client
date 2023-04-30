@@ -31,10 +31,6 @@ export default class UserService {
     }
 
     async logout() {
-        tokenService.removeToken();
-        localStorage.removeItem('token');
-        localStorage.removeItem('email')
-        localStorage.removeItem('name')
-        localStorage.removeItem('token_type')
+        localStorage.clear();
     }
 }

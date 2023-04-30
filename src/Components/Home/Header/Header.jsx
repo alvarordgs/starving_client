@@ -6,9 +6,22 @@ import { HeaderCustomizado,
         ContainerLogout } from "./headerStyle";
 import { FaSearch } from 'react-icons/fa';
 import { MdLogout } from 'react-icons/md';
+import { useNavigate } from "react-router-dom";
+import { REACT_APP_LOGIN_API } from '../../../Utilities/constantes';
+import UserService from '../../../Services/UserService'
 
+const userService = new UserService(REACT_APP_LOGIN_API);
+ 
 // eslint-disable-next-line react/prop-types
 const Header = ({ nomeUser }) => {
+
+    const navigate = useNavigate();
+
+    const handleLogout =  () => {
+        userService.logout();
+        navigate('/');
+    }
+
     return (
         <HeaderCustomizado>
             <HeaderSubContainer>
@@ -28,7 +41,7 @@ const Header = ({ nomeUser }) => {
                         <p>Olá, <b style={{color: "red"}}>{nomeUser}</b></p>
                         <span>Seja bem-vindo!</span>
                     </div>
-                    <ContainerLogout>
+                    <ContainerLogout onClick={handleLogout}>
                         <MdLogout style={{color: "red", fontSize: "1.5rem"}}/>
                     </ContainerLogout>
                 </ContainerUsuario>

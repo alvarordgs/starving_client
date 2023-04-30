@@ -42,3 +42,11 @@ export const RestauranteHeader = styled.header`
         gap: 8px;
     }
 `
+
+export const ContainerLoading = styled.div`
+    width: inherit;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`

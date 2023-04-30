@@ -35,6 +35,7 @@ const App = () => {
       setLoading(false)
     } catch (err) {
       alert('Usuário ou senha incorreto...' + err)
+      setLoading(false)
     }
   }
 
