@@ -7,7 +7,8 @@ import { HeaderCustomizado,
 import { FaSearch } from 'react-icons/fa';
 import { MdLogout } from 'react-icons/md';
 
-const Header = () => {
+// eslint-disable-next-line react/prop-types
+const Header = ({ nomeUser }) => {
     return (
         <HeaderCustomizado>
             <HeaderSubContainer>
@@ -24,7 +25,7 @@ const Header = () => {
                 </form>
                 <ContainerUsuario >
                     <div>
-                        <p>Olá, <b style={{color: "red"}}>Fulano</b></p>
+                        <p>Olá, <b style={{color: "red"}}>{nomeUser}</b></p>
                         <span>Seja bem-vindo!</span>
                     </div>
                     <ContainerLogout>

@@ -1,41 +1,9 @@
-import { useState } from 'react';
 import { Container, Form, SubContainer } from './loginStyle';
 import Input from '../../Components/Login/Input/Input';
 import Botao from '../../Components/Login/Botao/Botao';
-import { validarEmail, validarSenha } from '../../Utilities/validadores';
-import UserService from '../../Services/UserService';
-import { useNavigate } from 'react-router-dom';
 
-const userService = new UserService('https://reqres.in/api');
-
-const Login = () => {
-
-    const [loading, setLoading] = useState(false);
-    const [form, setForm] = useState([]);
-    const navigate = useNavigate();
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            setLoading(true)
-            const response = await userService.login(form);
-            if(response === true) {
-                alert('usuario logado com sucesso');
-                navigate('/restaurantes');
-            }
-            setLoading(false)
-        } catch(err) {
-            alert('Algo deu errado com o login...' + err)
-        }
-    }
-
-    const handleChange = (e) => {
-        setForm({...form, [e.target.name]: e.target.value});
-    }
-
-    const validadorInput = () => {
-        return validarEmail(form.email) && validarSenha(form.password);
-    }
+// eslint-disable-next-line react/prop-types
+const Login = ({ handleSubmit, loading, handleChange, validadorInput }) => {
 
     return (
         <Container>

@@ -5,7 +5,7 @@ const userService = new UserService();
 
 // eslint-disable-next-line react/prop-types
 const ProtectedRoutes = ({children}) => {
-    const usuarioAutenticado = userService.usuarioAutenticado();
+    const usuarioAutenticado = userService.isUserAuthenticated();
     return usuarioAutenticado ? children : <App/>
 }
 
