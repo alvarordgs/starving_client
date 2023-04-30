@@ -3,15 +3,15 @@ import TokenService from './TokenService';
 
 const tokenService = new TokenService();
 export default class UserService {
-    constructor(loginURL) {
+    constructor(baseURL) {
         this.axios = axios.create({
-            baseURL: loginURL
+            baseURL: baseURL
         })
     }
 
     async login(dados) {
         try {
-            const { data } = await this.axios.post('/login', dados);
+            const { data } = await this.axios.post('/auth/login', dados);
             const { user, access_token, token_type } = data;
 
             tokenService.setToken(access_token)

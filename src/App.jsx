@@ -9,8 +9,9 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 import { Routes, Route } from 'react-router-dom';
 import { validarEmail, validarSenha } from './Utilities/validadores';
+import { REACT_APP_LOGIN_API } from './Utilities/constantes'
 
-const userService = new UserService('http://127.0.0.1:8000/api/auth');
+const userService = new UserService(REACT_APP_LOGIN_API);
 
 const App = () => {
 
