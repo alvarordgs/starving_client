@@ -41,32 +41,34 @@ const RestaurantePage = () => {
     console.log(restaurante)
 
     return (
-        <ContainerProdutos>
-            <RestauranteHeader>
-                <h1>{restaurante.nome}</h1>
-                <ul>
-                    <li>
-                        <MdLocalPhone style={{ fontSize: "1.25rem" }} />
-                        <span>{restaurante.telefone}</span>
-                    </li>
-                    <li>
-                        <MdLocationOn style={{ fontSize: "1.25rem" }} />
-                        <span>{restaurante.rua}, {restaurante.numero} - {restaurante.bairro}</span>
-                    </li>
-                </ul>
-            </RestauranteHeader>
+        <>
             {carregando ? (
                 <ContainerLoading>
                     <p>Carregando...</p>
                 </ContainerLoading>
             ) : (
-                <ListaProdutos>
-                    {cardapio.map((produto) => (
-                        <Produto key={produto.id} produto={produto}/>
-                    ))}
-                </ListaProdutos>
+                <ContainerProdutos>
+                    <RestauranteHeader>
+                        <h1>{restaurante.nome}</h1>
+                        <ul>
+                            <li>
+                                <MdLocalPhone style={{ fontSize: "1.25rem" }} />
+                                <span>{restaurante.telefone}</span>
+                            </li>
+                            <li>
+                                <MdLocationOn style={{ fontSize: "1.25rem" }} />
+                                <span>{restaurante.rua}, {restaurante.numero} - {restaurante.bairro}</span>
+                            </li>
+                        </ul>
+                    </RestauranteHeader>
+                    <ListaProdutos>
+                        {cardapio.map((produto) => (
+                            <Produto key={produto.id} produto={produto} />
+                        ))}
+                    </ListaProdutos>
+                </ContainerProdutos>
             )}
-        </ContainerProdutos>
+        </>
     )
 }
 

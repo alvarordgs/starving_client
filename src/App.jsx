@@ -18,7 +18,8 @@ const App = () => {
   // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState([]);
-  const [nomeUser, setNomeUser] = useState("")
+  const [nomeUser, setNomeUser] = useState("");
+  const [erro, setErro] = useState("");
 
   const navigate = useNavigate();
 
@@ -34,7 +35,8 @@ const App = () => {
       }
       setLoading(false)
     } catch (err) {
-      alert('Usuário ou senha incorreto...' + err)
+      alert("Usuário ou senha incorretos. Tente novamente!" + err)
+      setErro("Usuário ou senha incorretos. Tente novamente!");
       setLoading(false)
     }
   }
@@ -54,6 +56,7 @@ const App = () => {
         loading={loading}
         handleChange={handleChange}
         validadorInput={validadorInput}
+        erro={erro}
       />} />
       <Route path="/restaurantes" element={
         <Layout 

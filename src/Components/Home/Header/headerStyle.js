@@ -1,16 +1,29 @@
 import styled from 'styled-components';
 
 export const HeaderCustomizado = styled.header`
-    padding: 20px 40px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px 1px;
+
+    @media (max-width: 1000px) {
+        padding: 20px;
+    }
 `
 
 export const HeaderSubContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     max-width: 1200px;
+    padding: 20px;
     margin: 0px auto;
+
+    @media (max-width: 1000px) {
+        justify-content: space-around;
+    }
+
+    @media (max-width: 600px) {
+        justify-content: center;
+    }
 
 `
 
@@ -40,6 +53,14 @@ export const InputBuscarCustomizado = styled.input`
         font-size: 12px;
         opacity 0.7;
     }
+
+    @media (max-width: 1000px) {
+        min-width: 250px;
+    }
+
+    @media (max-width: 600px) {
+        min-width: 150px;
+    }
 `
 
 export const ContainerUsuario = styled.div`
@@ -50,6 +71,10 @@ export const ContainerUsuario = styled.div`
     p, span {
         font-size: .875rem;
         color: #717171;
+    }
+
+    @media (max-width: 1000px) {
+        gap: 0px 20px;
     }
 `
 

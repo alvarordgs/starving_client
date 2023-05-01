@@ -7,9 +7,10 @@ export const BotaoCustomizado = styled.button`
   background-color: #3a3a3a;
   border-radius: 8px;
   font-weight: bold;
-  width: 100%;
+  min-width: 350px;
   padding: 16px;
   cursor: pointer;
+
 
   ${props => props.disabled === false &&
     `

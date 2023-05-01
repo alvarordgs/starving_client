@@ -1,9 +1,9 @@
-import { Container, Form, SubContainer } from './loginStyle';
+import { Container, Form, SubContainer, ErroMsg } from './loginStyle';
 import Input from '../../Components/Login/Input/Input';
 import Botao from '../../Components/Login/Botao/Botao';
 
 // eslint-disable-next-line react/prop-types
-const Login = ({ handleSubmit, loading, handleChange, validadorInput }) => {
+const Login = ({ handleSubmit, loading, handleChange, validadorInput, erro}) => {
 
     return (
         <Container>
@@ -22,12 +22,18 @@ const Login = ({ handleSubmit, loading, handleChange, validadorInput }) => {
                     onChange={handleChange}
                     type='password'
                 />
+
+                <ErroMsg style={erro != '' ? {display: "block"} : {display: "none"}}>
+                    {erro}
+                </ErroMsg>
+
                 <Botao
                     type='submit'
                     text='Entrar'
                     onClick={handleSubmit}
                     disabled={loading === true || !validadorInput()}
                 />
+
                 <SubContainer>
                     <p>Não possui conta ?</p>
                     <a href="#">Cadastrar</a>

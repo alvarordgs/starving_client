@@ -15,4 +15,6 @@ export const InputCustomizado = styled.input`
       font-size: 12px;
       opacity 0.7;
   }
+
+  
 `

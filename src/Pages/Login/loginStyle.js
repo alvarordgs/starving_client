@@ -21,6 +21,11 @@ export const Form = styled.form`
     width: 100%;
     max-width: 450px;
     gap: 20px 0px;
+    margin: 20px;
+    
+    @media (max-width: 600px) {
+        padding: 2rem;
+    }
 
     h1 {
         color: #fff;
@@ -35,13 +40,31 @@ export const Form = styled.form`
     }
 
     a {
-        color: white;
+        background: #fff;
+        padding: 12px 24px;
+        border-radius: 6px; 
+        color: #d40000;
         font-size: 0.875rem;
+        font-weight: bold;
     }
+
+    a:hover {
+        background: #cfcfcf;
+    }
+
+    
 `
 
 export const SubContainer = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: center;    
-    gap: 0px 20px;
+    gap: 15px;
+`
+
+export const ErroMsg = styled.p`
+    color: #fff;
+    font-size: 0.75rem !important;
+    text-align: center;
+    font-weight: 400;
 `
