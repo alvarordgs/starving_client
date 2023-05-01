@@ -8,7 +8,8 @@ const Login = ({ handleSubmit, loading, handleChange, validadorInput }) => {
     return (
         <Container>
             <Form>
-                <h1>Faça seu login 🖖</h1>
+                <img src="./../../../assets/logos/logo-starving-white.svg" alt="Logo Starving"/>
+                <h1>Login</h1>
                 <Input
                     name='email'
                     placeholder='Digite o seu e-mail'

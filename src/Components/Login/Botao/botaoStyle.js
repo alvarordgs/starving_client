@@ -2,20 +2,19 @@ import styled from  'styled-components';
 
 export const BotaoCustomizado = styled.button`
   color: #FFF;
-  font-size: 20px;
+  font-size: 1rem;
   border: 30px;
-  background-color: #6a6a6a;
+  background-color: #3a3a3a;
   border-radius: 8px;
+  font-weight: bold;
   width: 100%;
-  height: 50px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 16px;
   cursor: pointer;
 
   ${props => props.disabled === false &&
     `
       &:hover {
-        background-color: #FFF;
-        color: #6a6a6a;
+        background-color: #323232;
       }
     `}
   ${props => props.disabled &&`

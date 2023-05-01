@@ -6,7 +6,8 @@ export const Container = styled.div`
     align-items: center;
     height: 100vh;
     min-width: 100vw;
-    background-color: #383838;
+    background-color: #f7f7f7;
+    background-image: url('./../../../assets/imgs/bakground-login.jpg');
 `
 
 export const Form = styled.form`
@@ -15,14 +16,14 @@ export const Form = styled.form`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #201d1d;
-    border-radius: 5px;
+    background-color: #d40000;
+    border-radius: 8px;
     width: 100%;
     max-width: 450px;
-    gap: 30px 0px;
+    gap: 20px 0px;
 
     h1 {
-        color: white;
+        color: #fff;
         font-size: 20px;
         font-weight: light;
     }
