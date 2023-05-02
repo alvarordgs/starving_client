@@ -2,15 +2,17 @@ import { BoxRestaurante, BoxImgRestaurante, BoxRestauranteInfo } from "./restaur
 import { FaStar, FaRegClock } from 'react-icons/fa';
 import { RiEBike2Line } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
+import { REACT_APP_LOGIN_API } from './../../../Utilities/constantes'
 
 // eslint-disable-next-line react/prop-types
 const Restaurante = ({ restaurante }) => {
+
     return (
         // eslint-disable-next-line react/prop-types
         <Link to={`/restaurantes/${restaurante.id}`}>
             <BoxRestaurante>
                 <BoxImgRestaurante>
-                    <img src="../assets/imgs/restaurante-teste.jpg" alt="" />
+                    <img src="./assets/imgs/restaurante-teste.jpg" alt="" />
                 </BoxImgRestaurante>
                 <BoxRestauranteInfo>
                     <h4>{restaurante.nome}</h4>
