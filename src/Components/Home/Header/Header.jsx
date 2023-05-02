@@ -1,19 +1,16 @@
 import { HeaderCustomizado, 
         HeaderSubContainer, 
-        ContainerForm, 
-        InputBuscarCustomizado, 
         ContainerUsuario, 
         ContainerLogout } from "./headerStyle";
-import { FaSearch } from 'react-icons/fa';
 import { MdLogout } from 'react-icons/md';
 import { useNavigate } from "react-router-dom";
-import { REACT_APP_LOGIN_API } from '../../../Utilities/constantes';
+import { REACT_APP_LOGIN_API, CACHE_KEY_USER_NAME } from '../../../Utilities/constantes';
 import UserService from '../../../Services/UserService'
 
 const userService = new UserService(REACT_APP_LOGIN_API);
  
 // eslint-disable-next-line react/prop-types
-const Header = ({ nomeUser }) => {
+const Header = () => {
 
     const navigate = useNavigate();
 
@@ -22,23 +19,15 @@ const Header = ({ nomeUser }) => {
         navigate('/');
     }
 
+    const nameUser = JSON.parse(localStorage.getItem(CACHE_KEY_USER_NAME))
+
     return (
         <HeaderCustomizado>
             <HeaderSubContainer>
-                <form>
-                    <ContainerForm>
-                        <span>
-                            <FaSearch style={{color: "red"}}/>
-                        </span>
-                        <InputBuscarCustomizado
-                            type="text"
-                            name="inputSearch"
-                        />
-                    </ContainerForm>
-                </form>
+                <img src="./../../../../assets/logos/logo-starving-red.svg" alt="" />  
                 <ContainerUsuario >
                     <div>
-                        <p>Olá, <b style={{color: "red"}}>{nomeUser}</b></p>
+                        <p>Olá, <b style={{color: "red"}}>{nameUser}</b></p>
                         <span>Seja bem-vindo!</span>
                     </div>
                     <ContainerLogout onClick={handleLogout}>

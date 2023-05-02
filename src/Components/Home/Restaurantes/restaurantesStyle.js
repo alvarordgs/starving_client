@@ -33,9 +33,42 @@ export const ListaRestaurantes = styled.ul`
 `
 
 export const ContainerLoading = styled.div`
-    min-width: 100vw;
+    width: 1200px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+`
+
+export const ContainerForm = styled.div`
+    position: relative;
+
+    span {
+        position: absolute;
+        top: 16px;
+        left: 15px;
+    }
+`
+
+export const InputBuscarCustomizado = styled.input`
+    min-width: 450px;
+    padding: 16px 24px 16px 45px;
+    font-size: .875rem;
+    border: none;
+    border-radius: 8px;
+    background: #e6e6e6;
+    margin-bottom: 40px;    
+    &:focus {
+        outline: none;
+    }
+
+    input::placeholder {
+        color: #FFF;
+        font-size: 12px;
+        opacity 0.7;
+    }
+
+    @media (max-width: 600px){
+        width: 100%;
+    }
 `

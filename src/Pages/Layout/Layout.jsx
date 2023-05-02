@@ -3,11 +3,11 @@ import Header from '../../Components/Home/Header/Header';
 import { Outlet } from 'react-router-dom';
 
 // eslint-disable-next-line react/prop-types
-const Layout = ({ nomeUser }) => {
+const Layout = () => {
     return (
         <ContainerLayout>
             <Header
-                nomeUser={nomeUser}
+                //nomeUser={nomeUser}
             />
             <Outlet/>
         </ContainerLayout>

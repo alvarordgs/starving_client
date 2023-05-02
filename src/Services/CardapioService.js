@@ -22,7 +22,26 @@ export default class CardapioService extends UserService {
             }
         } catch (error) {
             console.error(error);
-            throw new Error('Erro ao buscar restaurantes');
+            throw new Error('Erro ao buscar cardapio!');
+        }
+
+        return [];
+    }
+
+    async getCardapiosDados() {
+        try {
+            const response = await this.axios.get('/restaurantes/cardapios/dados', {
+                headers: {
+                    Authorization: `Bearer ${tokenService.getToken()}`
+                }
+            });
+            
+            if(response.status === 200) {
+                return response.data;
+            }
+        } catch (error) {
+            console.error(error);
+            throw new Error('Erro ao buscar cardápios!');
         }
 
         return [];
