@@ -22,7 +22,6 @@ const App = () => {
   // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState([]);
-  //const [nomeUser, setNomeUser] = useState("");
   const [erro, setErro] = useState("");
 
   const navigate = useNavigate();
