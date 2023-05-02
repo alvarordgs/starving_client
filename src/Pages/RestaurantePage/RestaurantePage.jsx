@@ -25,7 +25,6 @@ const RestaurantePage = () => {
         async function fetchCardapio() {
             try {
                 const response = await cardapioService.getCardapio(id);
-                console.log('Response cardapio', response);
                 setCardapio(response);
                 setCarregando(false);
             } catch (error) {
@@ -37,8 +36,6 @@ const RestaurantePage = () => {
         fetchCardapio();
 
     }, [id]);
-
-    console.log(restaurante)
 
     return (
         <>
